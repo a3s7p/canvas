@@ -183,4 +183,3 @@ for i in canvas "${RUN_DEPS[@]}"; do
 done
 
 podman system reset -f
-fs_cleanup
