@@ -113,7 +113,7 @@ production:
   config:
     canvas:
       rich-content-service:
-        app-host: "http://localhost:3000"
+        app-host: "canvas-rce-api-host"
 EOF
 
 # copy example configurations

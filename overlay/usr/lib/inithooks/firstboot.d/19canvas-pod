@@ -68,7 +68,7 @@ PG_MAJOR="$(podman image inspect canvas | grep -m1 -Po 'POSTGRES_CLIENT=\K\d+')"
 PG_IMAGE="postgres:$PG_MAJOR-alpine"
 
 podman volume create pgdata
-podman pod create --name canvas-pod -p 80:80 -p 443:443
+podman pod create --name canvas-pod -p 80:80 -p 443:443 -p 3000:3000
 
 pod() {
   op="$1"
