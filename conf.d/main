@@ -136,6 +136,9 @@ sed -i "s|</footer>| \
 # tweak Dockerfile
 sed -i 's|\(rm -rf node_modules\)|\1 /home/docker/.cache /home/docker/.gem/3.3/cache /usr/src/app/public/dist/webpack-dev|' Dockerfile.production
 
+# tweak confconsole so it doesn't show podman NIC by default
+sed '/^#default_nic/s/^#//' /etc/confconsole/confconsole.conf
+
 ### all of the following would be similar for all containerized appliances
 
 # clean up build fs
